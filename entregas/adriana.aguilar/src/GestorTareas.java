@@ -22,8 +22,8 @@ public class GestorTareas {
             if (opcion == 1) {
                 if (numeroTareas < 10) {
                     System.out.print("Descripcion de la nueva tarea: ");
-                    String d = sc.nextLine();
-                    tareas[numeroTareas] = d;
+                    String descripcionTarea = sc.nextLine();
+                    tareas[numeroTareas] = descripcionTarea;
                     completadas[numeroTareas] = false;
                     numeroTareas++; // El contador se incrementa
                     System.out.println("Tarea anadida correctamente.");

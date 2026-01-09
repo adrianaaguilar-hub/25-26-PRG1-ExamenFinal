@@ -17,12 +17,12 @@ public class GestorTareas {
             System.out.println("[4] Ver estadisticas");
             System.out.println("[5] Salir");
             System.out.print("Opcion: ");
-            int opcion = sc.nextInt();
+            int opcionUsuario = sc.nextInt();
             sc.nextLine();
             
 
             do {
-            if (opcion == 1) {
+            if (opcionUsuario == 1) {
                 if (numeroTareas < 10) {
                     System.out.print("Descripcion de la nueva tarea: ");
                     String descripcionTarea = sc.nextLine();
@@ -33,7 +33,7 @@ public class GestorTareas {
                 } else {
                     System.out.println("ERROR: No se pueden anadir mas tareas, limite alcanzado.");
                 }
-            } else if (opcion == 2) {
+            } else if (opcionUsuario == 2) {
                 System.out.println("Tareas para Marcar");
                 for (int i = 0; i < numeroTareas; i++) {
                     System.out.println(
@@ -56,7 +56,7 @@ public class GestorTareas {
                 } else {
                     System.out.println("No hay tareas para marcar.");
                 }
-            } else if (opcion == 3) {
+            } else if (opcionUsuario == 3) {
                 System.out.println("Tareas Pendientes");
                 boolean hayPendientes = false;
                 for (int i = 0; i < numeroTareas; i++) {
@@ -68,7 +68,7 @@ public class GestorTareas {
                 if (!hayPendientes) {
                     System.out.println("(No hay tareas pendientes)");
                 }
-            } else if (opcion == 4) {
+            } else if (opcionUsuario == 4) {
                 System.out.println("Estadisticas");
                 int contarCompletadas = 0;
                 for (int i = 0; i < numeroTareas; i++) {
@@ -83,7 +83,7 @@ public class GestorTareas {
                     double porcentajeTareasCompletadas = (contarCompletadas * 100.0) / numeroTareas;
                     System.out.println("Porcentaje de completacion: " + porcentajeTareasCompletadas + "%");
                 }
-            } else if (opcion == 5) {
+            } else if (opcionUsuario == 5) {
                 System.out.println("Saliendo del gestor de tareas.");
                 usuarioOnline = false;
             } else {

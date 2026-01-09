@@ -33,7 +33,9 @@ public class GestorTareas {
                 } else {
                     System.out.println("ERROR: No se pueden anadir mas tareas, limite alcanzado.");
                 }
-            } else if (opcionUsuario == 2) {
+            } 
+            
+            if (opcionUsuario == 2) {
                 System.out.println("Tareas para Marcar");
                 for (int i = 0; i < numeroTareas; i++) {
                     System.out.println(
@@ -56,7 +58,9 @@ public class GestorTareas {
                 } else {
                     System.out.println("No hay tareas para marcar.");
                 }
-            } else if (opcionUsuario == 3) {
+            } 
+            
+            if (opcionUsuario == 3) {
                 System.out.println("Tareas Pendientes");
                 boolean hayPendientes = false;
                 for (int i = 0; i < numeroTareas; i++) {
@@ -68,7 +72,9 @@ public class GestorTareas {
                 if (!hayPendientes) {
                     System.out.println("(No hay tareas pendientes)");
                 }
-            } else if (opcionUsuario == 4) {
+            } 
+            
+            if (opcionUsuario == 4) {
                 System.out.println("Estadisticas");
                 int contarCompletadas = 0;
                 for (int i = 0; i < numeroTareas; i++) {
@@ -83,7 +89,9 @@ public class GestorTareas {
                     double porcentajeTareasCompletadas = (contarCompletadas * 100.0) / numeroTareas;
                     System.out.println("Porcentaje de completacion: " + porcentajeTareasCompletadas + "%");
                 }
-            } else if (opcionUsuario == 5) {
+            } 
+            
+            if (opcionUsuario == 5) {
                 System.out.println("Saliendo del gestor de tareas.");
                 usuarioOnline = false;
             } else {

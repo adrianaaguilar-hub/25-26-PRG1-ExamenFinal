@@ -77,8 +77,8 @@ public class GestorTareas {
                 System.out.println("Tareas completadas: " + contarCompletadas);
                 System.out.println("Tareas pendientes: " + (numeroTareas - contarCompletadas));
                 if (numeroTareas > 0) {
-                    double porc = (contarCompletadas * 100.0) / numeroTareas;
-                    System.out.println("Porcentaje de completacion: " + porc + "%");
+                    double porcentajeTareasCompletadas = (contarCompletadas * 100.0) / numeroTareas;
+                    System.out.println("Porcentaje de completacion: " + porcentajeTareasCompletadas + "%");
                 }
             } else if (opcion == 5) {
                 System.out.println("Saliendo del gestor de tareas.");

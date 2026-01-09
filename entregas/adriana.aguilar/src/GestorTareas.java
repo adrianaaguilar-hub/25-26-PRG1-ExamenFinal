@@ -25,7 +25,7 @@ public class GestorTareas {
                     String descripcionTarea = sc.nextLine();
                     tareas[numeroTareas] = descripcionTarea;
                     completadas[numeroTareas] = false;
-                    numeroTareas++; 
+                    numeroTareas++;
                     System.out.println("Tarea anadida correctamente.");
                 } else {
                     System.out.println("ERROR: No se pueden anadir mas tareas, limite alcanzado.");
@@ -33,11 +33,13 @@ public class GestorTareas {
             } else if (opcion == 2) {
                 System.out.println("Tareas para Marcar");
                 for (int i = 0; i < numeroTareas; i++) {
-                    System.out.println((i + 1) + ". " + tareas[i] + " [" + (completadas[i] ? "Completada" : "Pendiente") + "]");
+                    System.out.println(
+                            (i + 1) + ". " + tareas[i] + " [" + (completadas[i] ? "Completada" : "Pendiente") + "]");
                 }
                 if (numeroTareas > 0) {
                     System.out.print("Numero de tarea a marcar como completada: ");
                     int numeroTareaCompletada = sc.nextInt();
+
                     if (numeroTareaCompletada >= 1 && numeroTareaCompletada <= numeroTareas) {
                         if (!completadas[numeroTareaCompletada - 1]) {
                             completadas[numeroTareaCompletada - 1] = true;
@@ -65,17 +67,17 @@ public class GestorTareas {
                 }
             } else if (opcion == 4) {
                 System.out.println("Estadisticas");
-                int contCompletadas = 0;
+                int contarCompletadas = 0;
                 for (int i = 0; i < numeroTareas; i++) {
                     if (completadas[i]) {
-                        contCompletadas++;
+                        contarCompletadas++;
                     }
                 }
                 System.out.println("Total de tareas: " + numeroTareas);
-                System.out.println("Tareas completadas: " + contCompletadas);
-                System.out.println("Tareas pendientes: " + (numeroTareas - contCompletadas));
+                System.out.println("Tareas completadas: " + contarCompletadas);
+                System.out.println("Tareas pendientes: " + (numeroTareas - contarCompletadas));
                 if (numeroTareas > 0) {
-                    double porc = (contCompletadas * 100.0) / numeroTareas;
+                    double porc = (contarCompletadas * 100.0) / numeroTareas;
                     System.out.println("Porcentaje de completacion: " + porc + "%");
                 }
             } else if (opcion == 5) {

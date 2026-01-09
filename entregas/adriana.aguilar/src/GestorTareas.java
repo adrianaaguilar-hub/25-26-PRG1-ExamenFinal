@@ -9,7 +9,7 @@ public class GestorTareas {
 
         System.out.println("Gestor de Tareas v1.0");
 
-        while (true) {
+        
             System.out.println("[1] Anadir tarea");
             System.out.println("[2] Marcar tarea como completada");
             System.out.println("[3] Ver tareas pendientes");
@@ -86,7 +86,7 @@ public class GestorTareas {
             } else {
                 System.out.println("Opcion no valida. Intente de nuevo.");
             }
-        }
+        
         sc.close();
     }
 }

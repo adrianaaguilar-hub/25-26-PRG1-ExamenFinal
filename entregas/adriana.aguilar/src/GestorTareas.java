@@ -8,8 +8,8 @@ public class GestorTareas {
         int numeroTareas = 0;
         boolean usuarioOnline = true;
 
-        System.out.println("Gestor de Tareas v1.0");
-
+        do {
+            System.out.println("Gestor de Tareas v1.0");
         
             System.out.println("[1] Anadir tarea");
             System.out.println("[2] Marcar tarea como completada");
@@ -19,9 +19,7 @@ public class GestorTareas {
             System.out.print("Opcion: ");
             int opcionUsuario = scanner.nextInt();
             scanner.nextLine();
-            
 
-            do {
             if (opcionUsuario == 1) {
                 if (numeroTareas < 10) {
                     System.out.print("Descripcion de la nueva tarea: ");

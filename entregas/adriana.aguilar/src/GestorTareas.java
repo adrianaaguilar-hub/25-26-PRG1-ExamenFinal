@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class GestorTareas {
+class GestorTareas {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String[] tareas = new String[10];
@@ -39,10 +39,10 @@ public class GestorTareas {
                     System.out.println(
                             (i + 1) + ". " + tareas[i] + " [" + (completadas[i] ? "Completada" : "Pendiente") + "]");
                 }
+
                 if (numeroTareas > 0) {
                     System.out.print("Numero de tarea a marcar como completada: ");
                     int numeroTareaCompletada = scanner.nextInt();
-
                     if (numeroTareaCompletada >= 1 && numeroTareaCompletada <= numeroTareas) {
                         if (!completadas[numeroTareaCompletada - 1]) {
                             completadas[numeroTareaCompletada - 1] = true;

@@ -6,6 +6,7 @@ public class GestorTareas {
         String[] tareas = new String[10];
         boolean[] completadas = new boolean[10];
         int numeroTareas = 0;
+        boolean usuarioOnline = true;
 
         System.out.println("Gestor de Tareas v1.0");
 
@@ -18,7 +19,9 @@ public class GestorTareas {
             System.out.print("Opcion: ");
             int opcion = sc.nextInt();
             sc.nextLine();
+            
 
+            do {
             if (opcion == 1) {
                 if (numeroTareas < 10) {
                     System.out.print("Descripcion de la nueva tarea: ");
@@ -82,10 +85,11 @@ public class GestorTareas {
                 }
             } else if (opcion == 5) {
                 System.out.println("Saliendo del gestor de tareas.");
-                break;
+                usuarioOnline = false;
             } else {
                 System.out.println("Opcion no valida. Intente de nuevo.");
             }
+            } while (usuarioOnline);
         
         sc.close();
     }
